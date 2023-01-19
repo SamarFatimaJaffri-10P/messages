@@ -11,12 +11,8 @@ import { MessagesService } from './messages.service';
 
 @Controller('messages')
 export class MessagesController {
-  messagesService: MessagesService;
-
-  constructor() {
-    // FIXME: DON'T DO THIS ON REAL APPS
-    this.messagesService = new MessagesService();
-  }
+  // NOTE: When we mark constructor parameter as public it gets automatically assigned to the class
+  constructor(public messagesService: MessagesService) {}
 
   /**
    * Return all the messages in the system

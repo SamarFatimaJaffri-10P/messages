@@ -1,5 +1,7 @@
+import { Injectable } from '@nestjs/common';
 import { readFile, writeFile } from 'fs/promises';
 
+@Injectable()
 export class MessagesRepository {
   /**
    * Finds a message stored at the specified id
